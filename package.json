@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "playw": "playtest.js",
+  "scripts": {
+     "test": "playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@playwright/test": "^1.51.1",
+    "express": "^5.1.0",
+    "playwright": "^1.51.1"
+  }
+}
