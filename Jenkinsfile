@@ -1,16 +1,26 @@
 pipeline {
     agent any
-environment {
-    NEW_VERSION = '1.3.0'
-    
+parameters {
+   choices(name: 'VERSION', choices:['1.1.0','1.2.0','1.3.0'],description:'')
+    booleanParam(name: 'executeTests' , defaultValue:true ,description:'')
 }
     stages {
         stage('Print Hello') {
-            echo "building verison ${ NEW_VERSION}"
+            when{
+                expressiin {
+                    params.executeTests
+                }
+            
             }
             steps {
-                echo 'Hello, Jenkins!'
+                echo 'testing the application !'
                
         }
     }
+        stage("deploy"){
+            steps {
+                echo "deploying the application "
+                echo :deploying version ${param.Version}"
+            }
+        }
 }
