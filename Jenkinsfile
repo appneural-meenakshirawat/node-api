@@ -23,4 +23,6 @@ parameters {
                 echo :"deploying version ${param.Version}"
             }
         }
+    }
 }
+}}
