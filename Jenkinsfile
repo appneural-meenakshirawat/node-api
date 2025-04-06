@@ -1,18 +1,11 @@
 pipeline {
-    agent any  // Defines the agent or environment where the pipeline will run
+    agent any
 
     stages {
-        stage('Checkout') {
+        stage('Print Hello') {
             steps {
-                // Checkout the code from version control (e.g., Git)
-                echo "buildi the project"
+                echo 'Hello, Jenkins!'
             }
         }
-       stage("test"){
-           steps{
-
-             echo "test the project"
-           }
-             
-       }
     }
+}
