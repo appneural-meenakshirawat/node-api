@@ -20,7 +20,7 @@ parameters {
         stage("deploy"){
             steps {
                 echo 'deploying the application '
-                echo :"deploying version ${param.Version}"
+                echo "deploying version ${param.Version}"
             }
         }
     }
